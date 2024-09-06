@@ -47,7 +47,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                     title: const Text('Mga Aktibidad'),
                     onTap: () {
-                     Navigator.pushNamed(context, AllRoutes.catRoute);
+                     Navigator.pushNamed(context, AllRoutes.categoryRoute);
                     },
                   ),
                 const Divider(
@@ -61,7 +61,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                     title: const Text('Grado'),
                     onTap: () {
-                     Navigator.pushNamed(context, AllRoutes.scoreRoute);
+                     Navigator.pushNamed(context, AllRoutes.homeRoute);
                     },
                   ),
                 const Divider(
@@ -75,7 +75,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                     title: const Text('Progreso'),
                     onTap: () {
-                      Navigator.pushNamed(context, AllRoutes.progressRoute);
+                      Navigator.pushNamed(context, AllRoutes.homeRoute);
                     },
                   ),
                

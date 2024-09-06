@@ -1,13 +1,13 @@
 
 import 'package:flutter/material.dart';
 
-class Animal {
+class Things {
    final String name;
     final String svgAsset;
     final String soundAsset;
     final Color backgroundColor;
 
-  Animal({
+  Things({
      required this.name,
       required this.svgAsset,
       required this.soundAsset,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RectangularButton extends StatelessWidget {
   const RectangularButton({
@@ -16,17 +17,19 @@ class RectangularButton extends StatelessWidget {
       onPressed: onPressed,
       child: SizedBox(
         height: 50,
-        width: double.infinity,
+        width: 250,
         child: Card(
-          color: onPressed != null ? const Color(0xffFF5905) : null,
+          color: onPressed != null ? Color(0xfff5505b) : null,
           child: Center(
             child: Text(
               label,
-              style: const TextStyle(
-                letterSpacing: 2,
-                fontSize: 25,
-                fontWeight: FontWeight.w400,
-              ),
+              style: GoogleFonts.fredoka(
+                          textStyle: TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400
+                          ),
+                        ),
             ),
           ),
         ),

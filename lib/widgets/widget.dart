@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:trial_mobile/utils/constants.dart';
 
 class Buttons extends StatelessWidget {
   final onTap;
@@ -7,7 +6,7 @@ class Buttons extends StatelessWidget {
   final double width;
   final String buttonName;
   final fontColor;
-  final Color color;
+  //final Color color;
   final double fontSize;
   final FontWeight fontWeight;
   const Buttons(
@@ -16,7 +15,7 @@ class Buttons extends StatelessWidget {
       required this.height,
       required this.width,
       required this.buttonName,
-      this.color = NU_BLUE,
+      //this.color = NU_BLUE,
       this.fontColor,
       required this.fontSize,
       this.fontWeight = FontWeight.normal}
@@ -31,7 +30,7 @@ class Buttons extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-           color: color,
+           //color: color,
             borderRadius: const BorderRadius.all(Radius.circular(10))),
         child: Center(
           child: Text(

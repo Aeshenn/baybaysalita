@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:trial_mobile/utils/routes.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,14 +39,20 @@ class HomePage extends StatelessWidget {
                   minimumSize:  MaterialStateProperty.all(Size(190,55))
                 ),
                 onPressed: () {
-                   Navigator.pushNamed(context, AllRoutes.loginRoute);
+                   Navigator.pushNamed(context, AllRoutes.BottomNavRoute);
                 },
             child:  Text(
               "Simula",
-              style: TextStyle(color: Colors.white, fontSize: 16.0),
+               style: GoogleFonts.fredoka(
+                      textStyle: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ), 
             ),
           ),
-       ]) 
+          ),
+       ]
+       ) 
        
        ),
       ),

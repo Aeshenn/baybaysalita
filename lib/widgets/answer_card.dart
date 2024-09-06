@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /*
   If (no options is chosen)
@@ -48,9 +49,10 @@ class AnswerCard extends StatelessWidget {
                 border: Border.all(
                   color: isCorrectAnswer
                       ? Colors.green
+  
                       : isWrongAnswer
                           ? Colors.red
-                          : Colors.white24,
+                          : Colors.white,
                 ),
               ),
               child: Row(
@@ -58,11 +60,13 @@ class AnswerCard extends StatelessWidget {
                   Expanded(
                     child: Text(
                       question,
-                      style: const TextStyle(
-                            fontSize: 15,
-                            decoration: TextDecoration.none,
-                            color: Colors.black
-                      ),
+                      style: GoogleFonts.fredoka(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400
+                          ),
+                        ),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -79,10 +83,10 @@ class AnswerCard extends StatelessWidget {
               height: 70,
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                color: Colors.white10,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: const Color.fromARGB(255, 11, 128, 118),
+                  color: Colors.blue.shade700,
                 ),
               ),
               child: Row(
@@ -90,11 +94,13 @@ class AnswerCard extends StatelessWidget {
                   Expanded(
                     child: Text(
                       question,
-                      style: const TextStyle(
-                        fontSize: 15,
-                        decoration: TextDecoration.none,
-                        color: Colors.black
-                      ),
+                     style: GoogleFonts.fredoka(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400
+                          ),
+                        ),
                     ),
                   ),
                 ],
