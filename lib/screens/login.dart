@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
         body: Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('lib/img/login.png'),
+                    image: AssetImage('lib/img/logs.png'),
                     fit: BoxFit.fill)),
             child: Column(children: [
               Container(
@@ -70,13 +70,14 @@ class LoginPage extends StatelessWidget {
                                         ),
                                          SizedBox(height: 20),
                                          Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 25.0),
+                                          padding: EdgeInsets.symmetric(horizontal: 50.0),
                                           child: TextField(
-                                              cursorColor: Colors.black,
+                                              
+                                              //cursorColor: Colors.black,
                                               decoration: InputDecoration(
                                                 fillColor: Colors.white,
                                                 filled: true,
-                                                contentPadding:EdgeInsets.all(0.0),
+                                                //contentPadding:EdgeInsets.all(0.0),
                                                 labelText: 'Email',
                                                 labelStyle: TextStyle(
                                                   color: Colors.black,
@@ -101,9 +102,9 @@ class LoginPage extends StatelessWidget {
                                         ),
                                          SizedBox(height: 10,),
                                          Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 25.0),
+                                          padding: EdgeInsets.symmetric(horizontal: 50.0),
                                           child: TextField(
-                                              cursorColor: Colors.black,
+                                             // cursorColor: Colors.black,
                                               decoration: InputDecoration(
                                                 fillColor: Colors.white,
                                                 filled: true,
@@ -129,15 +130,14 @@ class LoginPage extends StatelessWidget {
                                               )),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 25.0),
+                                          padding:  EdgeInsets.symmetric(horizontal: 50.0),
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.end,
                                             children: [
                                               TextButton(
                                                 onPressed: () {},
-                                                child: const Text(
+                                                child:  Text(
                                                   'Forgot Password?',
                                                   style: TextStyle(
                                                       color: Colors.black,
@@ -149,19 +149,15 @@ class LoginPage extends StatelessWidget {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(
-                                          height: 5,
-                                        ),
-                                        const SizedBox(
-                                          height: 15,
-                                        ),
+                                         SizedBox( height: 5,),
+                                         SizedBox(height: 15,),
                                         MaterialButton(
                                           onPressed: () {
                                             Navigator.pushNamed(
-                                                context, AllRoutes.dashyRoute);
+                                                context, AllRoutes.catRoute);
                                           },
-                                          color:  Color(0xffFF5905),
-                                          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 210),
+                                          color:  Color(0xfff5505b),
+                                          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 180),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(20.0),

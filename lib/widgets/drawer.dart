@@ -45,9 +45,9 @@ class MyDrawer extends StatelessWidget {
                     leading: const Icon(
                       Icons.task,
                     ),
-                    title: const Text('Activity Selection'),
+                    title: const Text('Mga Aktibidad'),
                     onTap: () {
-                     Navigator.pushNamed(context, AllRoutes.categoryRoute);
+                     Navigator.pushNamed(context, AllRoutes.catRoute);
                     },
                   ),
                 const Divider(
@@ -59,7 +59,7 @@ class MyDrawer extends StatelessWidget {
                     leading: const Icon(
                       Icons.visibility,
                     ),
-                    title: const Text('View Score'),
+                    title: const Text('Grado'),
                     onTap: () {
                      Navigator.pushNamed(context, AllRoutes.scoreRoute);
                     },
@@ -73,7 +73,7 @@ class MyDrawer extends StatelessWidget {
                     leading: const Icon(
                       Icons.visibility,
                     ),
-                    title: const Text('My Progress'),
+                    title: const Text('Progreso'),
                     onTap: () {
                       Navigator.pushNamed(context, AllRoutes.progressRoute);
                     },
@@ -88,7 +88,7 @@ class MyDrawer extends StatelessWidget {
                     leading: const Icon(
                       Icons.logout_outlined,
                     ),
-                    title: const Text('Exit'),
+                    title: const Text('Mag Log-out'),
                     onTap: () {
                       Navigator.pushNamed(context, AllRoutes.homeRoute);
                     },

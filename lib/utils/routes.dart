@@ -14,4 +14,11 @@ class AllRoutes{
   static const String dashyRoute = "/dashy";
   static const String pagsasanayRoute = "/pagsasanay";
   static const String catRoute = "/cat";
+  static const String pagbasaRoute = "/pagbasa";
+
+
+  //Pagbaybay
+  static const String lettersRoute = "/letters";
+
+
 }

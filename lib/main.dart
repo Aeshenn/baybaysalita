@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:trial_mobile/list/pagbasa.dart';
 import 'package:trial_mobile/list/pagsusulit.dart';
 import 'package:trial_mobile/list/things.dart';
 import 'package:trial_mobile/list/try.dart';
 import 'package:trial_mobile/list/voice.dart';
+import 'package:trial_mobile/modules/abc.dart';
 import 'package:trial_mobile/modules/animals.dart';
 import 'package:trial_mobile/screens/cat.dart';
-import 'package:trial_mobile/screens/category.dart';
 import 'package:trial_mobile/screens/dashboard.dart';
 
 import 'package:trial_mobile/screens/homepage.dart';
@@ -43,7 +44,6 @@ class MainApp extends StatelessWidget {
           AllRoutes.homeRoute: (context) =>  const HomePage(),
           AllRoutes.loginRoute: (context) =>   LoginPage(),
           AllRoutes.codeRoute: (context) => const CodePage(),
-          AllRoutes.categoryRoute: (context) => const CategoryPage(),
           AllRoutes.animalRoute: (context) =>  AnimalsPage(),
           AllRoutes.quizRoute: (context) => const  PagsusulitPage(),
           AllRoutes.scoreRoute: (context) => const ScorePage(),
@@ -53,7 +53,10 @@ class MainApp extends StatelessWidget {
           AllRoutes.thingsRoute: (context) => ThingsPage(),
           AllRoutes.tryRoute: (context) => MyVoicePage(),
           AllRoutes.dashyRoute: (context) => DashboardPage(),
-                AllRoutes.catRoute: (context) => Cat(),
+          AllRoutes.catRoute: (context) => Cat(),
+          AllRoutes.pagbasaRoute: (context) => PagbasaPage(),
+          AllRoutes.lettersRoute: (context) => lettersPage(),
+
 
 
          // '/category': (context) => CategoryPage(),

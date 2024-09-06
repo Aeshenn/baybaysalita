@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:trial_mobile/utils/routes.dart';
+
+import '../widgets/drawer.dart';
 
 // ignore: must_be_immutable
 class Cat extends StatelessWidget {
@@ -14,13 +14,12 @@ class Cat extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // drawer: MyDrawer(),
+      drawer: MyDrawer(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        //backgroundColor:const Color(0xff62C9FF),
         centerTitle: true,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+         mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Image.asset(
             //   'lib/assets/logs.png',
@@ -32,7 +31,6 @@ class Cat extends StatelessWidget {
                 fontSize: 30,
                 color: Color.fromARGB(255, 0, 0, 0),
                 fontWeight: FontWeight.w300,
-                //letterSpacing: 1,
               ),
             ),
           ],
@@ -42,10 +40,11 @@ class Cat extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('lib/assets/voice.png'),
-              fit: BoxFit.fill)),
+              fit: BoxFit.fill),
+              ),
           child: Column(
             children: [
               Container(
@@ -54,191 +53,143 @@ class Cat extends StatelessWidget {
                 width: width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [],
                 ),
               ),
-              SingleChildScrollView(
+               SingleChildScrollView(
                 child: Container(
-                  width: width,
-                  padding: EdgeInsets.only(bottom: 20, top: 10),
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(
-                      image: AssetImage('lib/assets/.png'),
-                      fit: BoxFit.fill
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
-                    ),
+                      image: DecorationImage(
+                          image: AssetImage('lib/img/.png'),
+                          fit: BoxFit.fill),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                      )),
+                  //height: height,
+                  height: 700,
+                  width: width,
+                  padding: EdgeInsets.only(
+                    bottom: 20,
+                    top: 10,
                   ),
-                  child: Container(
-                    child: Container(
-                      height: 900,
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(200)
-                        )
-                      ),
-                        // child: GridView.count(
-                        //   shrinkWrap: true,
-                        //   physics: const NeverScrollableScrollPhysics(),
-                        //   crossAxisCount: 3,
-                        //   crossAxisSpacing: 40,
-                        //   mainAxisSpacing: 30,
-                        //   children: [
-                        //   ]
-                      child: GridView.count(
-                        primary: false,
-                        // padding: const EdgeInsets.all(20),
-                        crossAxisSpacing: 1,
-                        mainAxisSpacing: 1,
-                        crossAxisCount: 2,
-                        children: [
-                           Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(width: 1, color: Colors.black)
-                            ),
-                            height: 20,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                               
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
+                        child:    Column(
+                          children: [
+                            SizedBox(height: 20,),
+                            Container(
+                                decoration: BoxDecoration(
+                                  //border: Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                  image: AssetImage('lib/assets/.png'),
+                                  fit: BoxFit.fill),
+                                  color: Colors.amber
+                                ),
+                                height: 150,
+                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    minimumSize:  MaterialStateProperty.all(Size(450,150))
+                                  ),
+                                  onPressed: () {
+                                   Navigator.pushNamed(context, AllRoutes.dashyRoute);
+                                  },
+                                  child: Text(
+                                    'Pagbaybay',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.deepPurpleAccent,
+                                    ),
                                   ),
                                 ),
                               ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            // height: 200,
-                            alignment: Alignment.center,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
+                             SizedBox(height: 50,),
+                            Container(
+                                decoration: BoxDecoration(
+                                  //border: Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
                                   image: AssetImage('lib/assets/1.png'),
-                                  fit: BoxFit.fill
+                                  fit: BoxFit.fill),
                                 ),
-                            ),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
+                                height: 150,
+                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    minimumSize:  MaterialStateProperty.all(Size(450,150))
                                   ),
-                                  
-                                ),
-                                minimumSize:  MaterialStateProperty.all(Size(400,400))
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            // height: 200,
-                            alignment: Alignment.center,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Pagbabasa',
+                                    style: TextStyle(
+                                       fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.deepPurpleAccent,
+                                    ),
                                   ),
                                 ),
-                                minimumSize:  MaterialStateProperty.all(Size(100,100))
                               ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            // height: 200,
-                            alignment: Alignment.center,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
+                              SizedBox(height: 50,),
+                            Container(
+                                decoration: BoxDecoration(
+                                  //border: Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                  image: AssetImage('lib/assets/1.png'),
+                                  fit: BoxFit.fill),
+                                ),
+                                height: 150,
+                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    minimumSize:  MaterialStateProperty.all(Size(450,150))
+                                  ),
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Pagsasanay',
+                                     style: TextStyle(
+                                       fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.deepPurpleAccent,
+                                    ),
                                   ),
                                 ),
-                                minimumSize:  MaterialStateProperty.all(Size(100,100))
                               ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            // height: 200,
-                            alignment: Alignment.center,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
-                                  ),
-                                ),
-                                minimumSize:  MaterialStateProperty.all(Size(100,100))
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            // height: 200,
-                            alignment: Alignment.center,
-                            // padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero,
-                                  ),
-                                ),
-                                minimumSize:  MaterialStateProperty.all(Size(100,100))
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'Elevated Button with Icon'
-                              ),
-                            ),
-                          ),
+                          ],
+                        ),  
+                )
+               )
                         ]
                       )
                     )
                   )
-                )
-              )
-            ],
-          )
-        )
-      ),
-    );
+            
+                );
+              
   }
 }

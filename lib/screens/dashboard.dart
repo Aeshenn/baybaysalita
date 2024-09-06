@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trial_mobile/widgets/drawer.dart';
+import '../utils/routes.dart';
 
 // ignore: must_be_immutable
 class DashboardPage extends StatelessWidget {
@@ -7,36 +7,13 @@ class DashboardPage extends StatelessWidget {
 
   var height, width;
 
-  List imgData = [
-    "lib/assets/logs.png",
-    "lib/assets/logs.png",
-    "lib/assets/logs.png",
-    "lib/assets/logs.png",
-    "lib/assets/logs.png",
-    "lib/assets/logs.png",
-  ];
-  List titles = [
-    "letter name",
-    "letter sound",
-    "syllable",
-    "word",
-    "phrase",
-    "sentence",
-  ];
-
-  List routes = [
-    '/home'
-  ];
-
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      drawer: MyDrawer(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        //backgroundColor:const Color(0xff62C9FF),
         centerTitle: true,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -61,9 +38,9 @@ class DashboardPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('lib/assets/voice.png'), fit: BoxFit.fill)),
+                  image: AssetImage('lib/assets/.png'), fit: BoxFit.fill)),
           child: Column(
             children: [
               Container(
@@ -140,72 +117,266 @@ class DashboardPage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('lib/assets/.png'),
+                          image: AssetImage('lib/assets/voice.png'),
                           fit: BoxFit.fill),
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30),
                       )),
-                  //height: height,
+                  height: 670,
                   width: width,
                   padding: EdgeInsets.only(
                     bottom: 20,
                     top: 10,
                   ),
-                  child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 1.1,
-                        mainAxisSpacing: 25,
-                      ),
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      itemCount: imgData.length,
-                      itemBuilder: (context, index) {
-                        return InkWell(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => routes[index]));
-                          },
-                          child: Container(
-                            margin: EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 20),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black26,
-                                  spreadRadius: 1,
-                                  blurRadius: 6,
+                  child: Column(
+                    children: [
+                      SizedBox(height: 20,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                           children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  //border: Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                  image: AssetImage('lib/assets/1.png'),
+                                  fit: BoxFit.fill),
+                                  color: Color.fromARGB(255, 249, 242, 224)
                                 ),
-                              ],
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Image.asset(
-                                  imgData[index],
-                                  width: 100,
-                                ),
-                                Text(
-                                  titles[index],
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                                height: 150,
+                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    minimumSize:  MaterialStateProperty.all(Size(225,150))
                                   ),
-                                )
-                              ],
-                            ),
-                          ),
-                        );
-                      }),
+                                  onPressed: () {
+                                   Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                  },
+                                  child: Text(
+                                    'Tunog ng \nAlpabeto',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.deepPurpleAccent,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                             
+                              Container(
+                                decoration: BoxDecoration(
+                                  //border: Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                  image: AssetImage('lib/assets/1.png'),
+                                  fit: BoxFit.fill),
+                                  color: Color.fromARGB(255, 249, 242, 224)
+                                ),
+                                height: 150,
+                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    minimumSize:  MaterialStateProperty.all(Size(225,150))
+                                  ),
+                                  onPressed: () {
+                                   Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                  },
+                                  child: Text(
+                                    'Tunog ng \nHayop',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.deepPurpleAccent,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                           ],
+                      ),
+                      SizedBox(height: 40,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      //border: Border.all(width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                      image: AssetImage('lib/assets/1.png'),
+                                      fit: BoxFit.fill),
+                                      color: Color.fromARGB(255, 249, 242, 224)
+                                    ),
+                                    height: 150,
+                                    //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        minimumSize:  MaterialStateProperty.all(Size(225,150))
+                                      ),
+                                      onPressed: () {
+                                       Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                      },
+                                      child: Text(
+                                        'Pagbaybay',
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                   Container(
+                                    decoration: BoxDecoration(
+                                      //border: Border.all(width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                      image: AssetImage('lib/assets/1.png'),
+                                      fit: BoxFit.fill),
+                                      color: Color.fromARGB(255, 249, 242, 224)
+                                    ),
+                                    height: 150,
+                                    //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        minimumSize:  MaterialStateProperty.all(Size(225,150))
+                                      ),
+                                      onPressed: () {
+                                       Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                      },
+                                      child: Text(
+                                        'Pagbaybay',
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                                SizedBox(height: 40,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      //border: Border.all(width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                      image: AssetImage('lib/assets/1.png'),
+                                      fit: BoxFit.fill),
+                                      color: Color.fromARGB(255, 249, 242, 224)
+                                    ),
+                                    height: 150,
+                                    //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        minimumSize:  MaterialStateProperty.all(Size(225,150))
+                                      ),
+                                      onPressed: () {
+                                       Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                      },
+                                      child: Text(
+                                        'Pagbaybay',
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                   Container(
+                                    decoration: BoxDecoration(
+                                      //border: Border.all(width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                      image: AssetImage('lib/assets/1.png'),
+                                      fit: BoxFit.fill),
+                                      color: Color.fromARGB(255, 249, 242, 224)
+                                    ),
+                                    height: 150,
+                                    //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        minimumSize:  MaterialStateProperty.all(Size(225,150))
+                                      ),
+                                      onPressed: () {
+                                       Navigator.pushNamed(context, AllRoutes.pagbasaRoute);
+                                      },
+                                      child: Text(
+                                        'Pagbaybay',
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                    ]  
+                      )
+                )
+              )
+                    ],
+                  )
                 ),
               )
-            ],
-          ),
-        ),
-      ),
-    );
+          
+          );
+     
   }
 }

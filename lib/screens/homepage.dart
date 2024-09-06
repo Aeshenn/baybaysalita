@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('lib/img/home.png'), fit: BoxFit.fill)),
+                image: AssetImage('lib/img/simula.png'), fit: BoxFit.fill)),
         alignment: Alignment.center,
         child: Column(children: [
           // Image.asset(
@@ -23,24 +23,24 @@ class HomePage extends StatelessWidget {
           //   height: ScreenUtil().setHeight(400),
           //   ),
           SizedBox(
-            height: ScreenUtil().setHeight(530),
+            height: ScreenUtil().setHeight(600),
           ),
           ElevatedButton(
             style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 223, 139, 80)),
-                  elevation: MaterialStateProperty.all(3),
-                  shadowColor: MaterialStateProperty.all<Color>(Colors.grey),
+                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xfff5505b)),
+                  // elevation: MaterialStateProperty.all(3),
+                  // shadowColor: MaterialStateProperty.all<Color>(Colors.grey),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  minimumSize:  MaterialStateProperty.all(Size(150,50))
+                  minimumSize:  MaterialStateProperty.all(Size(190,55))
                 ),
                 onPressed: () {
                    Navigator.pushNamed(context, AllRoutes.loginRoute);
                 },
-            child: const Text(
+            child:  Text(
               "Simula",
               style: TextStyle(color: Colors.white, fontSize: 16.0),
             ),
