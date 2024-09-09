@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../utils/routes.dart';
 
 // ignore: must_be_immutable
-class DashboardPage extends StatelessWidget {
-  DashboardPage({super.key});
+class PagbaybayDashPage extends StatelessWidget {
+  PagbaybayDashPage({super.key});
 
   var height, width;
 
@@ -20,7 +20,7 @@ class DashboardPage extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
              Text(
-                'PAGBAYBAY',
+                '',
                  style: GoogleFonts.fredoka(
                     textStyle: TextStyle(
                       fontSize: 25,

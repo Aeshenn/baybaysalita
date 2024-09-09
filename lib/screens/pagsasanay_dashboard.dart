@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trial_mobile/utils/routes.dart';
 
@@ -21,7 +20,7 @@ class PagsasanayDashPage extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'PAGSASANAY',
+                '',
                 style: GoogleFonts.fredoka(
                   textStyle: TextStyle(
                     fontSize: 25,
@@ -87,17 +86,15 @@ class PagsasanayDashPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     image: DecorationImage(
-                                        image: AssetImage('lib/img/letters/.png'),
+                                        image: AssetImage('lib/img/letters/Assessment1.png'),
                                         fit: BoxFit.fill),
                                     color: Color.fromARGB(255, 249, 242, 224)),
                                 height: 150,
-                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Colors.transparent),
-                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                       shadowColor: MaterialStateProperty.all<Color>(
                                           Colors.transparent),
                                       shape: MaterialStateProperty.all<
@@ -113,7 +110,7 @@ class PagsasanayDashPage extends StatelessWidget {
                                         context, AllRoutes.assess1Item1Route);
                                   },
                                   child: Text(
-                                    'Assessment 1',
+                                    '',
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,
@@ -127,20 +124,17 @@ class PagsasanayDashPage extends StatelessWidget {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    //border: Border.all(width: 1, color: Colors.black),
                                     borderRadius: BorderRadius.circular(20),
                                     image: DecorationImage(
-                                        image: AssetImage('lib/img/letters/.png'),
+                                        image: AssetImage('lib/img/letters/Assessment2.png'),
                                         fit: BoxFit.fill),
                                     color: Color.fromARGB(255, 249, 242, 224)),
                                 height: 150,
-                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Colors.transparent),
-                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                       shadowColor: MaterialStateProperty.all<Color>(
                                           Colors.transparent),
                                       shape: MaterialStateProperty.all<
@@ -153,10 +147,10 @@ class PagsasanayDashPage extends StatelessWidget {
                                           MaterialStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
-                                        context, AllRoutes.assess1Item1Route);
+                                        context, AllRoutes.assess2Item1Route);
                                   },
                                   child: Text(
-                                    'Assessment 2',
+                                    '',
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,
@@ -170,20 +164,18 @@ class PagsasanayDashPage extends StatelessWidget {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    //border: Border.all(width: 1, color: Colors.black),
                                     borderRadius: BorderRadius.circular(20),
                                     image: DecorationImage(
-                                        image: AssetImage('lib/img/letters/.png'),
+                                        image: AssetImage('lib/img/letters/Assessment3.png'),
                                         fit: BoxFit.fill),
                                     color: Color.fromARGB(255, 249, 242, 224)),
                                 height: 150,
-                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
+                              
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Colors.transparent),
-                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                       shadowColor: MaterialStateProperty.all<Color>(
                                           Colors.transparent),
                                       shape: MaterialStateProperty.all<
@@ -196,10 +188,10 @@ class PagsasanayDashPage extends StatelessWidget {
                                           MaterialStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
-                                        context, AllRoutes.pagbasaRoute);
+                                        context, AllRoutes.assess3Item1Route);
                                   },
                                   child: Text(
-                                    'Assessment 3',
+                                    '',
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,
@@ -213,20 +205,18 @@ class PagsasanayDashPage extends StatelessWidget {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    //border: Border.all(width: 1, color: Colors.black),
+                                   
                                     borderRadius: BorderRadius.circular(20),
                                     image: DecorationImage(
-                                        image: AssetImage('lib/img/letters/.png'),
+                                        image: AssetImage('lib/img/letters/Assessment4.png'),
                                         fit: BoxFit.fill),
                                     color: Color.fromARGB(255, 249, 242, 224)),
                                 height: 150,
-                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Colors.transparent),
-                                      //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                       shadowColor: MaterialStateProperty.all<Color>(
                                           Colors.transparent),
                                       shape: MaterialStateProperty.all<
@@ -242,7 +232,7 @@ class PagsasanayDashPage extends StatelessWidget {
                                         context, AllRoutes.story1Item1Route);
                                   },
                                   child: Text(
-                                    'Assessment 4',
+                                    '',
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,

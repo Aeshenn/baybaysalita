@@ -1,27 +1,44 @@
 class AllRoutes {
   static String homeRoute = "/home";
-  static String animalRoute = "/animal";
   static String loginRoute = "/login";
-  static String rateRoute = "/rate";
-  static String voiceRoute = "/voice";
-  static String thingsRoute = "/things";
-  static String tryRoute = "/try";
-  static String dashyRoute = "/dashy";
-  static String categoryRoute = "/maincategory";
-  static String pagbasaRoute = "/pagbasa";
-  static String hayopRoute = "/hayop";
-  static String pagbasaDashRoute = "/pagbasaDash";
+  static String BottomNavRoute = '/navbar';
+
+  //PAGBABASA CATEGORY
   static String salitaRoute = "/salita";
   static String pariralaRoute = "/parirala";
+  static String pangungusapRoute = "/pangungusap";
 
-  //Pagbaybay
+  //PAGBAYBAY CATEGORY
   static String lettersRoute = "/letters";
-  static String BottomNavRoute = '/navbar';
+  static String hayopRoute = "/hayop";
+  static String thingsRoute = "/things";
+
+  //CATEGORY
+  static String categoryRoute = "/maincategory";
+  static String pagbaybayRoute = "/pagbaybayDash";
+  static String pagbasaDashRoute = "/pagbasaDash";
   static String pagsasanayDashRoute = '/pagsasanayDash';
 
   //ASSESSMENT 1
   static String assess1Item1Route = "/assess1-item1";
+  static String assess1Item2Route = "/assess1-item2";
+  static String assess1Item3Route = "/assess1-item3";
+  static String assess1Item4Route = "/assess1-item4";
+  static String assess1Item5Route = "/assess1-item5";
 
+  //ASSESSMENT 2
+  static String assess2Item1Route = "/assess2-item1";
+  static String assess2Item2Route = "/assess2-item2";
+  static String assess2Item3Route = "/assess2-item3";
+  static String assess2Item4Route = "/assess2-item4";
+  static String assess2Item5Route = "/assess2-item5";
+
+  //ASSESSMENT 3
+  static String assess3Item1Route = "/assess3-item1";
+  static String assess3Item2Route = "/assess3-item2";
+  static String assess3Item3Route = "/assess3-item3";
+  static String assess3Item4Route = "/assess3-item4";
+  static String assess3Item5Route = "/assess3-item5";
 
   //ASSESSMENT 4
   static String story1Item1Route = "/assess4-story1";
@@ -35,9 +52,7 @@ class AllRoutes {
 
   static String story4Item4Route = "/assess4-story4";
   static String quiz4Route = "/quiz4"; //Quiz4
- 
 
   static String story5Item5Route = "/assess4-story5";
   static String quiz5Route = "/quiz5"; //Quiz5
-
-} 
+}

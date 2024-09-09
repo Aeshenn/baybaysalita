@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:trial_mobile/models/pangungusap_model.dart';
 import 'package:trial_mobile/models/parirala_model.dart';
 import 'package:trial_mobile/utils/constants.dart';
 
@@ -13,25 +14,25 @@ class lettersPage extends StatelessWidget {
   final FlutterTts flutterTts = FlutterTts();
 
   final int index;
-  final List<PariralaData> pariralaItems;
+  final List<PangungusapData> pangungusapItem;
   final bool isTimerEnabled;
 
   lettersPage({
     Key? key,
     required this.index,
-    required this.pariralaItems,
+    required this.pangungusapItem,
     required this.isTimerEnabled,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final item = pariralaItems[index];
+    final item = pangungusapItem[index];
     return Container(
       child: Card(
-        color: item.pariralaBackgroundColor,
+        color: item.pangungusapBG,
         child: InkWell(
           onTap: () {
-            _showAnimalPopup(context, AppConstants.pariralaItems[index], index);
+            _showAnimalPopup(context, AppConstants.pangungusapItem[index], index);
           },
           child: Padding(
             padding: const EdgeInsets.all(6),
@@ -40,7 +41,7 @@ class lettersPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  item.pariralaName,
+                  item.pangungusapName,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.fredoka(
                     textStyle: TextStyle(
@@ -67,7 +68,7 @@ class lettersPage extends StatelessWidget {
   }
 
   Future<void> _showAnimalPopup(
-      BuildContext context, PariralaData parirala, int currentIndex) async {
+      BuildContext context, PangungusapData pangungusap, int currentIndex) async {
     await flutterTts.setVolume(1.0);
     await flutterTts.setSpeechRate(.5);
     await flutterTts.setLanguage("EN-IN");
@@ -77,12 +78,11 @@ class lettersPage extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return _PopupDialog(
-          //abakadaItems: abakadaItems,
           currentIndex: index,
           isAutoNextEnabled: isTimerEnabled,
-          parirala: parirala,
+          pangungusap: pangungusap,
           audioPlayer: audioPlayer,
-          pariralaItems: AppConstants.pariralaItems,
+          pangungusapItem: AppConstants.pangungusapItem,
           flutterTts: flutterTts,
         );
       },
@@ -92,19 +92,19 @@ class lettersPage extends StatelessWidget {
 
 // ignore: must_be_immutable
 class _PopupDialog extends StatefulWidget {
-  final List<PariralaData> pariralaItems;
+  final List<PangungusapData> pangungusapItem;
   int currentIndex;
   final bool isAutoNextEnabled;
-  PariralaData parirala;
+  PangungusapData pangungusap;
   final AudioPlayer audioPlayer;
   final FlutterTts flutterTts;
 
   _PopupDialog({
     Key? key,
-    required this.pariralaItems,
+    required this.pangungusapItem,
     required this.currentIndex,
     required this.isAutoNextEnabled,
-    required this.parirala,
+    required this.pangungusap,
     required this.audioPlayer,
     required this.flutterTts,
   }) : super(key: key);
@@ -125,7 +125,7 @@ class _PopupDialogState extends State<_PopupDialog> {
         padding: EdgeInsets.zero,
         width: MediaQuery.of(context).size.width * 0.7,
         decoration: BoxDecoration(
-            color: widget.parirala.pariralaBackgroundColor,
+            color: widget.pangungusap.pangungusapBG,
             borderRadius: BorderRadius.circular(15)),
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -136,20 +136,20 @@ class _PopupDialogState extends State<_PopupDialog> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 IconButton(
                   onPressed: () {
-                    _stopPariralaSound();
+                    _stopPangungusapSound();
                     Navigator.pop(context);
                   },
                   icon: const Icon(Icons.arrow_back),
                 ),
                 IconButton(
                   onPressed: () {
-                    _speakPariralaName(widget.parirala.pariralaSound);
+                    _speakPangungusapName(widget.pangungusap.pangungusapSoundAsset);
                   },
                   icon: const Icon(Icons.volume_up),
                 ),
               ]),
               Text(
-                widget.parirala.pariralaName,
+                widget.pangungusap.pangungusapName,
                 style: GoogleFonts.fredoka(
                   textStyle: TextStyle(
                     fontSize: 40,
@@ -163,7 +163,7 @@ class _PopupDialogState extends State<_PopupDialog> {
               GestureDetector(
                 onTap: () {},
                 child: SvgPicture.asset(
-                  widget.parirala.pariralaAsset,
+                  widget.pangungusap.pangungusapAsset,
                   width: MediaQuery.of(context).size.width * 0.5,
                   height: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
@@ -174,7 +174,7 @@ class _PopupDialogState extends State<_PopupDialog> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: _navigateToPreviousParirala,
+                    onPressed: _navigateToPreviousPangungusap,
                     child: Text(
                       'Nakaraan',
                       style: GoogleFonts.fredoka(
@@ -186,7 +186,7 @@ class _PopupDialogState extends State<_PopupDialog> {
                     ),
                   ),
                   ElevatedButton(
-                      onPressed: _navigateToNextParirala,
+                      onPressed: _navigateToNextPangungusap,
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                           Color.fromARGB(214, 27, 46, 225),
@@ -216,46 +216,46 @@ class _PopupDialogState extends State<_PopupDialog> {
   //   await widget.audioPlayer.play();
   // }
 
-  Future<void> _stopPariralaSound() async {
+  Future<void> _stopPangungusapSound() async {
     await widget.audioPlayer.stop();
   }
 
-  Future<void> _speakPariralaName(String pariralaSound) async {
+  Future<void> _speakPangungusapName(String pariralaSound) async {
     await widget.audioPlayer.setAsset(pariralaSound);
     await widget.audioPlayer.play();
   }
 
-  void _navigateToPreviousParirala() {
+  void _navigateToPreviousPangungusap() {
     setState(() {
       widget.currentIndex =
-          (widget.currentIndex - 1) % widget.pariralaItems.length;
+          (widget.currentIndex - 1) % widget.pangungusapItem.length;
       if (widget.currentIndex < 0) {
-        widget.currentIndex = widget.pariralaItems.length - 1;
+        widget.currentIndex = widget.pangungusapItem.length - 1;
       }
-      widget.parirala = widget.pariralaItems[widget.currentIndex];
+      widget.pangungusap = widget.pangungusapItem[widget.currentIndex];
     });
   }
 
-  void _navigateToNextParirala() {
+  void _navigateToNextPangungusap() {
     setState(() {
       widget.currentIndex =
-          (widget.currentIndex + 1) % widget.pariralaItems.length;
-      widget.parirala = widget.pariralaItems[widget.currentIndex];
+          (widget.currentIndex + 1) % widget.pangungusapItem.length;
+      widget.pangungusap = widget.pangungusapItem[widget.currentIndex];
     });
   }
 }
 
-class pariralaPage extends StatefulWidget {
-  pariralaPage({Key? key}) : super(key: key);
+class pangungusapPage extends StatefulWidget {
+  pangungusapPage({Key? key}) : super(key: key);
 
   @override
-  State<pariralaPage> createState() => _pariralaPageState();
+  State<pangungusapPage> createState() => _pangungusapPageState();
 }
 
-class _pariralaPageState extends State<pariralaPage> {
+class _pangungusapPageState extends State<pangungusapPage> {
   bool isTimerEnabled = false;
 
-  List<PariralaData> items = AppConstants.pariralaItems;
+  List<PangungusapData> items = AppConstants.pangungusapItem;
 
   @override
   Widget build(BuildContext context) {
@@ -284,13 +284,13 @@ class _pariralaPageState extends State<pariralaPage> {
           padding: const EdgeInsets.all(9),
           child: GridView.count(
             crossAxisCount: MediaQuery.of(context).size.width ~/
-                200, // Adjust the value based on screen width
-            childAspectRatio: 1.0, // Aspect ratio of items
+                300, // Adjust the value based on screen width
+            childAspectRatio: 2.0, // Aspect ratio of items
             children: List.generate(
               items.length,
               (index) => lettersPage(
                 index: index,
-                pariralaItems: items,
+                pangungusapItem: items,
                 isTimerEnabled: isTimerEnabled,
               ),
             ),
@@ -302,5 +302,5 @@ class _pariralaPageState extends State<pariralaPage> {
 }
 
 void main() {
-  runApp(pariralaPage());
+  runApp(pangungusapPage());
 }

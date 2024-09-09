@@ -20,7 +20,7 @@ class PagbabasaDashPage extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'PAGBABASA',
+                '',
                  style: GoogleFonts.fredoka(
                     textStyle: TextStyle(
                       fontSize: 25,
@@ -197,7 +197,7 @@ class PagbabasaDashPage extends StatelessWidget {
                                     MaterialStateProperty.all(Size(450, 150))),
                             onPressed: () {
                               Navigator.pushNamed(
-                                  context, AllRoutes.thingsRoute);
+                                  context, AllRoutes.pangungusapRoute);
                             },
                             child: Text(
                               '',

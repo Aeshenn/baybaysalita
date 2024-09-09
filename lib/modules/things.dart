@@ -45,7 +45,7 @@ class lettersPage extends StatelessWidget {
                 item.name,
               style: GoogleFonts.fredoka(
                       textStyle: TextStyle(
-                        fontSize: 30,
+                        fontSize: 25,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
                       ), 

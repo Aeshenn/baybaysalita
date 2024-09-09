@@ -40,20 +40,22 @@ class _QuizScreenState extends State<assessment4Quiz1> {
     final question = Item1questions[questionIndex];
     bool isLastQuestion = questionIndex == Item1questions.length - 1;
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: Text(
-          '',
-          style: GoogleFonts.fredoka(
-            textStyle: TextStyle(
-                fontSize: 25, 
-                color: Colors.black, 
-                fontWeight: FontWeight.w500),
+         appBar: AppBar(
+          title: Row(
+            children: [
+           Text(
+              'Pagsasanay 4',
+              style: GoogleFonts.fredoka(
+                    textStyle: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                    ), 
+                    ),
+            ),
+            ],
           ),
         ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
       body: SingleChildScrollView(
         child: SizedBox(
           height: ScreenUtil().screenHeight,

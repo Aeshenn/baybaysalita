@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trial_mobile/models/abakada_model.dart';
 
 import 'package:trial_mobile/models/hayop_model.dart';
+import 'package:trial_mobile/models/pangungusap_model.dart';
 import 'package:trial_mobile/models/parirala_model.dart';
 import 'package:trial_mobile/models/salita_model.dart';
 import 'package:trial_mobile/models/things_model.dart';
@@ -852,7 +853,7 @@ class AppConstants {
   static List<PariralaData> pariralaItems = [
     PariralaData(
       pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
-      pariralaName: 'Ang kotse',
+      pariralaName: 'ang kotse',
       pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
       pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
     ),
@@ -862,11 +863,86 @@ class AppConstants {
       pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
       pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
     ),
-     PariralaData(
+    PariralaData(
       pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
-      pariralaName: 'May bola',
+      pariralaName: 'may bola',
       pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
       pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'ang tali',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'ang pari',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'sa sako',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'may pusa',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'ate at kuya',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'ubo nang ubo',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PariralaData(
+      pariralaAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pariralaName: 'mga puno',
+      pariralaBackgroundColor: Color.fromARGB(193, 240, 241, 170),
+      pariralaSound: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+  ];
+
+  static List<PangungusapData> pangungusapItem = [
+    PangungusapData(
+      pangungusapAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pangungusapName: 'Ako ay may lapis.',
+      pangungusapBG: Color.fromARGB(193, 240, 241, 170),
+      pangungusapSoundAsset: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PangungusapData(
+      pangungusapAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pangungusapName: 'May manika ang bata',
+      pangungusapBG: Color.fromARGB(193, 240, 241, 170),
+      pangungusapSoundAsset: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PangungusapData(
+      pangungusapAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pangungusapName: 'May itlog sa pugad',
+      pangungusapBG: Color.fromARGB(193, 240, 241, 170),
+      pangungusapSoundAsset: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PangungusapData(
+      pangungusapAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pangungusapName: 'Si nene ay maganda',
+      pangungusapBG: Color.fromARGB(193, 240, 241, 170),
+      pangungusapSoundAsset: AssetsPath.getSalitaSound(Abakada.yaSound),
+    ),
+    PangungusapData(
+      pangungusapAsset: AssetsPath.getSalitaImages(Salita.bulaklak),
+      pangungusapName: 'Ako ay masipag',
+      pangungusapBG: Color.fromARGB(193, 240, 241, 170),
+      pangungusapSoundAsset: AssetsPath.getSalitaSound(Abakada.yaSound),
     ),
   ];
 }

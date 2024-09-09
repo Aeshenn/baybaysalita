@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trial_mobile/screens/category.dart';
-import 'package:trial_mobile/screens/pagbaybay_dashboard.dart';
+import 'package:trial_mobile/screens/pagsasanay_dashboard.dart';
 import 'package:trial_mobile/screens/profile.dart';
 
 class BottomNav extends StatefulWidget {
@@ -20,7 +20,7 @@ class _BottomNavState extends State<BottomNav> {
 
   final List <Widget> _children = [
     CategoryPage(),
-    DashboardPage(),
+    PagsasanayDashPage(),
     ProfilePage(),
 
   ];
@@ -57,7 +57,7 @@ class _BottomNavState extends State<BottomNav> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
-            BottomNavigationBarItem(icon: Icon(Icons.category_outlined), label: 'category'),
+            BottomNavigationBarItem(icon: Icon(Icons.category_outlined), label: 'pagsasanay'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile'),
           ],
          ),

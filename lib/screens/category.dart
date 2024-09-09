@@ -85,11 +85,9 @@ class CategoryPage extends StatelessWidget {
                                           color:  Color(0xfff5505b),
                                 ),
                                 height: 150,
-                                //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                  //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                   shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
@@ -99,7 +97,7 @@ class CategoryPage extends StatelessWidget {
                                     minimumSize:  MaterialStateProperty.all(Size(450,150))
                                   ),
                                   onPressed: () {
-                                   Navigator.pushNamed(context, AllRoutes.dashyRoute);
+                                   Navigator.pushNamed(context, AllRoutes.pagbaybayRoute);
                                   },
                                   child: Text(
                                     '',
