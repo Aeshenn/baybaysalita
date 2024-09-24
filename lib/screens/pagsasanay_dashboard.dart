@@ -93,18 +93,18 @@ class PagsasanayDashPage extends StatelessWidget {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all<Color>(
+                                          WidgetStateProperty.all<Color>(
                                               Colors.transparent),
-                                      shadowColor: MaterialStateProperty.all<Color>(
+                                      shadowColor: WidgetStateProperty.all<Color>(
                                           Colors.transparent),
-                                      shape: MaterialStateProperty.all<
+                                      shape: WidgetStateProperty.all<
                                           RoundedRectangleBorder>(
                                         RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                         ),
                                       ),
                                       minimumSize:
-                                          MaterialStateProperty.all(Size(450, 150))),
+                                          WidgetStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
                                         context, AllRoutes.assess1Item1Route);
@@ -133,18 +133,18 @@ class PagsasanayDashPage extends StatelessWidget {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all<Color>(
+                                          WidgetStateProperty.all<Color>(
                                               Colors.transparent),
-                                      shadowColor: MaterialStateProperty.all<Color>(
+                                      shadowColor: WidgetStateProperty.all<Color>(
                                           Colors.transparent),
-                                      shape: MaterialStateProperty.all<
+                                      shape: WidgetStateProperty.all<
                                           RoundedRectangleBorder>(
                                         RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                         ),
                                       ),
                                       minimumSize:
-                                          MaterialStateProperty.all(Size(450, 150))),
+                                          WidgetStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
                                         context, AllRoutes.assess2Item1Route);
@@ -174,18 +174,18 @@ class PagsasanayDashPage extends StatelessWidget {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all<Color>(
+                                          WidgetStateProperty.all<Color>(
                                               Colors.transparent),
-                                      shadowColor: MaterialStateProperty.all<Color>(
+                                      shadowColor: WidgetStateProperty.all<Color>(
                                           Colors.transparent),
-                                      shape: MaterialStateProperty.all<
+                                      shape: WidgetStateProperty.all<
                                           RoundedRectangleBorder>(
                                         RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                         ),
                                       ),
                                       minimumSize:
-                                          MaterialStateProperty.all(Size(450, 150))),
+                                          WidgetStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
                                         context, AllRoutes.assess3Item1Route);
@@ -215,18 +215,18 @@ class PagsasanayDashPage extends StatelessWidget {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all<Color>(
+                                          WidgetStateProperty.all<Color>(
                                               Colors.transparent),
-                                      shadowColor: MaterialStateProperty.all<Color>(
+                                      shadowColor: WidgetStateProperty.all<Color>(
                                           Colors.transparent),
-                                      shape: MaterialStateProperty.all<
+                                      shape: WidgetStateProperty.all<
                                           RoundedRectangleBorder>(
                                         RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                         ),
                                       ),
                                       minimumSize:
-                                          MaterialStateProperty.all(Size(450, 150))),
+                                          WidgetStateProperty.all(Size(450, 150))),
                                   onPressed: () {
                                     Navigator.pushNamed(
                                         context, AllRoutes.story1Item1Route);

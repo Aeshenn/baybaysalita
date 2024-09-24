@@ -16,13 +16,13 @@ class assessment4Quiz1 extends StatefulWidget {
 class _QuizScreenState extends State<assessment4Quiz1> {
   int? selectedAnswerIndex;
   int questionIndex = 0;
-  int score = 0;
+  int _score = 0;
 
   void pickAnswer(int value) {
     selectedAnswerIndex = value;
     final question = Item1questions[questionIndex];
     if (selectedAnswerIndex == question.correctAnswerIndexItem1) {
-      score++;
+      _score++;
     }
     setState(() {});
   }
@@ -109,8 +109,8 @@ class _QuizScreenState extends State<assessment4Quiz1> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (_) => ResultScreen(
-                                  score: score,
+                                builder: (_) => ResultScreen1(
+                                  score: _score,
                                 ),
                               ),
                             );

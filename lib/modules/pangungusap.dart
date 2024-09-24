@@ -6,7 +6,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:trial_mobile/models/pangungusap_model.dart';
-import 'package:trial_mobile/models/parirala_model.dart';
 import 'package:trial_mobile/utils/constants.dart';
 
 class lettersPage extends StatelessWidget {
@@ -188,7 +187,7 @@ class _PopupDialogState extends State<_PopupDialog> {
                   ElevatedButton(
                       onPressed: _navigateToNextPangungusap,
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
+                        backgroundColor: WidgetStateProperty.all(
                           Color.fromARGB(214, 27, 46, 225),
                         ),
                       ),

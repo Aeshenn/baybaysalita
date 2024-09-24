@@ -175,7 +175,7 @@ class _PopupDialogState extends State<_PopupDialog> {
                   ElevatedButton(
                       onPressed: _navigateToNextSalita,
                       style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
+                                    backgroundColor: WidgetStateProperty.all(
                                        Color.fromARGB(214, 27, 46, 225),
                                     ),
                                   ),

@@ -28,15 +28,15 @@ class HomePage extends StatelessWidget {
           ),
           ElevatedButton(
             style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xfff5505b)),
+                  backgroundColor: WidgetStateProperty.all<Color>(Color(0xfff5505b)),
                   // elevation: MaterialStateProperty.all(3),
                   // shadowColor: MaterialStateProperty.all<Color>(Colors.grey),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  minimumSize:  MaterialStateProperty.all(Size(190,55))
+                  minimumSize:  WidgetStateProperty.all(Size(190,55))
                 ),
                 onPressed: () {
                    Navigator.pushNamed(context, AllRoutes.BottomNavRoute);

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trial_mobile/utils/item_constant.dart';
-import 'package:trial_mobile/screens/result_screen1.dart';
 import 'package:trial_mobile/widgets/answer_card.dart';
 import 'package:trial_mobile/widgets/next_button.dart';
+
+import '../../screens/result_screen4.dart';
 
 class assessment4Quiz4 extends StatefulWidget {
    assessment4Quiz4({super.key});
@@ -109,7 +110,7 @@ class _QuizScreenState extends State<assessment4Quiz4> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (_) => ResultScreen(
+                                builder: (_) => ResultScreen4(
                                   score: score,
                                 ),
                               ),

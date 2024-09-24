@@ -126,15 +126,15 @@ class PagbaybayDashPage extends StatelessWidget {
                                 //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    backgroundColor: WidgetStateProperty.all<Color>(Colors.transparent),
                                   //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+                                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                       ),
                                     ),
-                                     minimumSize:  MaterialStateProperty.all(Size(450,150))
+                                     minimumSize:  WidgetStateProperty.all(Size(450,150))
                                   ),
                                   onPressed: () {
                                    Navigator.pushNamed(context, AllRoutes.lettersRoute);
@@ -163,15 +163,15 @@ class PagbaybayDashPage extends StatelessWidget {
                                 //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                 child: ElevatedButton(
                                   style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    backgroundColor: WidgetStateProperty.all<Color>(Colors.transparent),
                                   //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                  shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+                                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
                                       ),
                                     ),
-                                     minimumSize:  MaterialStateProperty.all(Size(450,150))
+                                     minimumSize:  WidgetStateProperty.all(Size(450,150))
                                   ),
                                   onPressed: () {
                                    Navigator.pushNamed(context, AllRoutes.hayopRoute);
@@ -200,15 +200,15 @@ class PagbaybayDashPage extends StatelessWidget {
                                     //padding: EdgeInsets.symmetric(vertical: 25, horizontal: 85),
                                     child: ElevatedButton(
                                       style: ButtonStyle(
-                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                        backgroundColor: WidgetStateProperty.all<Color>(Colors.transparent),
                                       //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+                                        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(20),
                                           ),
                                         ),
-                                          minimumSize:  MaterialStateProperty.all(Size(450,150))
+                                          minimumSize:  WidgetStateProperty.all(Size(450,150))
                                       ),
                                       onPressed: () {
                                        Navigator.pushNamed(context, AllRoutes.thingsRoute);

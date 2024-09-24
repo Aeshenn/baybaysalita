@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:trial_mobile/widgets/splashscreen.dart';
 
 import 'modules/abakada.dart';
 import 'modules/hayop.dart';
@@ -70,7 +71,7 @@ class MainApp extends StatelessWidget {
               theme: ThemeData(
                   scaffoldBackgroundColor:
                       const Color.fromARGB(255, 242, 226, 252)),
-              home: HomePage(), // Replace mainpage with HomePage
+              home: SplashScreen(), // Replace mainpage with HomePage
               routes: {
                 AllRoutes.homeRoute: (context) =>  HomePage(),
                 AllRoutes.loginRoute: (context) => LoginPage(),

@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:trial_mobile/utils/item_constant.dart';
 import 'package:trial_mobile/utils/routes.dart';
 
-class ResultScreen extends StatelessWidget {
-  const ResultScreen({
+class ResultScreen1 extends StatelessWidget {
+  const ResultScreen1({
     super.key,
     required this.score,
   });

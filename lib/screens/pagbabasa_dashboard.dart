@@ -94,19 +94,19 @@ class PagbabasaDashPage extends StatelessWidget {
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                    MaterialStateProperty.all<Color>(
+                                    WidgetStateProperty.all<Color>(
                                         Colors.transparent),
                                 //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                shadowColor: MaterialStateProperty.all<Color>(
+                                shadowColor: WidgetStateProperty.all<Color>(
                                     Colors.transparent),
-                                shape: MaterialStateProperty.all<
+                                shape: WidgetStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                 ),
                                 minimumSize:
-                                    MaterialStateProperty.all(Size(450, 150))),
+                                    WidgetStateProperty.all(Size(450, 150))),
                             onPressed: () {
                               Navigator.pushNamed(
                                   context, AllRoutes.salitaRoute);
@@ -138,19 +138,19 @@ class PagbabasaDashPage extends StatelessWidget {
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                    MaterialStateProperty.all<Color>(
+                                    WidgetStateProperty.all<Color>(
                                         Colors.transparent),
                                 //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                shadowColor: MaterialStateProperty.all<Color>(
+                                shadowColor: WidgetStateProperty.all<Color>(
                                     Colors.transparent),
-                                shape: MaterialStateProperty.all<
+                                shape: WidgetStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                 ),
                                 minimumSize:
-                                    MaterialStateProperty.all(Size(450, 150))),
+                                    WidgetStateProperty.all(Size(450, 150))),
                             onPressed: () {
                               Navigator.pushNamed(
                                   context, AllRoutes.pariralaRoute);
@@ -182,19 +182,19 @@ class PagbabasaDashPage extends StatelessWidget {
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                    MaterialStateProperty.all<Color>(
+                                    WidgetStateProperty.all<Color>(
                                         Colors.transparent),
                                 //overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-                                shadowColor: MaterialStateProperty.all<Color>(
+                                shadowColor: WidgetStateProperty.all<Color>(
                                     Colors.transparent),
-                                shape: MaterialStateProperty.all<
+                                shape: WidgetStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                 ),
                                 minimumSize:
-                                    MaterialStateProperty.all(Size(450, 150))),
+                                    WidgetStateProperty.all(Size(450, 150))),
                             onPressed: () {
                               Navigator.pushNamed(
                                   context, AllRoutes.pangungusapRoute);

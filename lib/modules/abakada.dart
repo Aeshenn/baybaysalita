@@ -155,46 +155,46 @@ class _PopupDialogState extends State<_PopupDialog> {
                               alignment: Alignment.center,
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              ElevatedButton(
-                                onPressed: _navigateToPreviousAbakada,
-                                child:  Text('Nakaraan',
-                                style: GoogleFonts.fredoka(
-                                      textStyle: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.black,
-                                      ), 
-                                      ),
-                                      ),
-                              ),
-                              ElevatedButton(
-                                onPressed: _navigateToNextAbakada,
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                       Color.fromARGB(214, 27, 46, 225),
-                                    ),
+                              IconButton(
+                                    onPressed: () {
+                                      _navigateToPreviousAbakada();
+                                    
+                                    },
+                                    icon: const Icon(Icons.arrow_circle_left, size: 35,),
                                   ),
-                                child:  Text('Sunod',
-                                style: GoogleFonts.fredoka(
-                                      textStyle: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.white,
-                                      ), 
-                                      ),
-                                )
-                              ),
+                               IconButton(
+                                    onPressed: () {
+                                      _navigateToNextAbakada();
+                                     
+                                    },
+                                    icon: const Icon(Icons.arrow_circle_right, size: 35,),
+                                  ),
                             ],
                           ),
-                          const SizedBox(height: 50),
+                          const SizedBox(height: 10),
+                           IconButton(
+                                    onPressed: () {
+                                      _navigateToNextAbakada();
+                                     
+                                    },
+                                    icon: const Icon(Icons.mic, size: 35,),
+                                  ),
+                          // GestureDetector(
+                          //     onLongPressStart: _startRec, // start recording when long pressed
+                          //     onLongPressUp: _stopRec, // stop recording when released
+                          //     child: Text("Hold to record"),
+                          //   );
                         ],
                       ),
                     ),
                   ),
               );
   }
+
   //    Future<void> _playAnimalSound(String abakadaSoundAsset) async {
   //   await widget.audioPlayer.setAsset(abakadaSoundAsset);
   //   await widget.audioPlayer.play();
